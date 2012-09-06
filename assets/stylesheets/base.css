@@ -1,0 +1,196 @@
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: #333;
+  font-weight: 400;
+}
+
+
+
+
+/* Text styles */
+
+p {
+  line-height: 26px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #111;
+}
+
+h1 {
+  font-size: 26px;
+  text-align: center;
+  line-height: 36px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 50px 0 10px 0;
+}
+
+h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 30px 0 8px 0;
+  color: #444;
+}
+
+a, a:visited {
+  color: #3399cc;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+em {
+  font-weight: 700;
+}
+
+
+
+
+/* Layout */
+
+#posts {
+  width: 600px;
+  margin: 30px auto;
+}
+
+#posts li {
+  margin-bottom: 15px;
+}
+
+#post {
+  width: 600px;
+  margin: 30px auto 200px auto;
+}
+
+#post img {
+  border: 1px solid #ddd;
+}
+
+#meta {
+  font-size: 12px;
+  text-align: center;
+  margin: 5px 0 20px 0;
+  color: #999;
+}
+
+#sidebar {
+  position: fixed;
+  top: 40px;
+  margin-left: 10px;
+  width: 200px;
+  height: 100px;
+}
+
+#sidebar h4 {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+#sidebar p {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 10px 0 0 0;
+}
+
+
+
+
+/* Footer */
+
+#footer-fade {
+  position: fixed;
+  bottom: 60px;
+  width: 100%;
+  height: 100px;
+  /*background-color: red;*/
+  background-image: url('../images/fade.png');
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+footer p {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+/* Resume */
+
+#resume {
+  width: 600px;
+  margin: 50px auto 200px auto;
+}
+
+#resume #contact {
+  font-size: 12px;
+  text-align: center;
+  margin: 8px 0 20px 0;
+  color: #999;
+}
+
+#resume #contact a, #resume #contact a:visited {
+  color: #999;
+  text-decoration: none;
+}
+
+#resume #contact a:hover {
+  text-decoration: underline;
+}
+
+#resume li {
+  margin: 40px 0;
+}
+
+#resume li h3 {
+  margin: 0;
+}
+
+#resume li .year {
+  float: right;
+}
+
+#resume li p {
+  margin: 10px 0 0 0;
+}
+
+#resume #languages .column {
+  float: right;
+  width: 40%;
+}
+
+#resume #languages li {
+  margin: 0 0 8px 0;
+}
+
+#resume #school {
+  font-size: 14px;
+  color: #999;
+  margin: 6px 0;
+}
+
+#resume #references {
+  margin: 80px 0;
+  text-align: center;
+}
