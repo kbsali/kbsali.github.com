@@ -52,19 +52,14 @@ DB setup
 
 Apache setup
 ------------
-    vi /etc/apache2/sites-available/redmine.example.com
-
-    .. --- /etc/apache2/sites-available/redmine.example.com ---
-    <VirtualHost *:80>
+    echo '<VirtualHost *:80>
      ServerName redmine.example.com
      DocumentRoot /usr/local/share/redmine/public
      <Directory /usr/local/share/redmine/public>
        AllowOverride all
        Options -MultiViews
      </Directory>
-    </VirtualHost>
-    ..
-
+    </VirtualHost>' > /etc/apache2/sites-available/redmine.example.com
     a2ensite redmine.example.com
     a2dissite 000-default
     service apache2 restart
@@ -114,12 +109,7 @@ Visit https://github.com/settings/ssh and add the newly generated public key (se
     git clone --mirror git@github.com:USER/project.git
     cd project.git
     git fetch -q --all
-
-    vi /etc/cron.d/sync_git_repos
-
-    .. --- /etc/cron.d/sync_git_repos ---
-    */5 * * * * redmine cd /PATH/TO/REPOS/project.git && git fetch -q --all
-    ..
+    echo '*/5 * * * * redmine cd /PATH/TO/REPOS/project.git && git fetch -q --all' > /etc/cron.d/sync_git_repos
 
 Note : here you will have to configure you *ssh keys* :
 
@@ -140,3 +130,8 @@ References
 * [Redmine Github Hook](https://github.com/koppen/redmine_github_hook)
 
 Done!
+
+Updates
+-------
+
+* [2012-10-02] replace cron + vhost setup from "vi XXX" to "echo 'YYY' > XXX" so a simple copy/paste is enough
